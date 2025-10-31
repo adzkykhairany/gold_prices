@@ -1,0 +1,153 @@
+:root{
+  --blue-600: #0b66ff;
+  --blue-700: #0446c6;
+  --bg: #f3f6ff;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #ffd166; /* gold accent */
+}
+*{
+    box-sizing:border-box
+}
+
+body{
+    font-family:Inter,system-ui,Arial,sans-serif;
+    margin:0;
+    background:linear-gradient(180deg,var(--bg),#eef4ff);
+    color:#0f172a
+}
+
+.container{
+    max-width:1100px;
+    margin:36px auto;
+    padding:24px
+}
+
+header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:18px
+}
+
+.brand{
+    display:flex;
+    gap:14px;
+    align-items:center
+}
+
+.logo{
+    width:52px;
+    height:52px;
+    border-radius:12px;
+    background:linear-gradient(135deg,var(--blue-600),var(--blue-700));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-weight:700;
+    font-size:20px
+}
+
+h1{
+    margin:0;
+    font-size:20px
+}
+
+p.lead{
+    margin:0;
+    color:var(--muted)
+}
+
+.card{
+    background:var(--card);
+    border-radius:12px;
+    box-shadow:0 8px 30px rgba(9,30,66,0.06);
+    padding:18px
+}
+
+/* nav */
+.nav{
+    display:flex;
+    gap:10px;
+    margin:18px 0
+}
+
+.nav button{
+    background:transparent;
+    border:0;
+    padding:10px 16px;
+    border-radius:10px;
+    color:var(--muted);
+    cursor:pointer
+}
+    
+.nav button.active{
+    background:linear-gradient(90deg,var(--blue-600),var(--blue-700));
+    color:white
+}
+
+.controls{
+    display:flex;
+    gap:8px;
+    align-items:center
+}
+
+.period-btn{
+    background:transparent;
+    border:1px solid rgba(11,102,255,0.12);
+    padding:6px 8px;
+    border-radius:6px;
+    color:var(--blue-700);
+    cursor:pointer;
+    font-size:13px;
+    min-width:38px;
+    text-align:center
+}
+
+.period-btn:hover{
+    background:rgba(11,102,255,0.04)
+}
+
+.period-btn.active{
+    background:var(--blue-600);
+    color:white;
+    border-color:transparent;
+    box-shadow:0 4px 10px rgba(11,102,255,0.08)
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:18px
+}
+
+.table-wrap{
+    overflow:auto
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:14px
+}
+
+thead th{
+    background:#f8fbff;
+    padding:12px;text-align:center;
+    color:var(--muted);
+    font-weight:600
+}
+
+tbody td{
+    Padding:12px;
+    border-top:1px solid #eef3ff
+}
+
+tbody tr:hover td{
+    background:#fbfdff
+}
+
+.chart-area{padding:12px}
+
+@media(min-width:900px){.grid{grid-template-columns:1fr}}
